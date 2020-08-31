@@ -209,11 +209,11 @@ public struct PreviewOptions: ViewModifier {
 
 @available(OSX 10.15.0, *)
 extension View {
-    func previewOptions(title: String? = nil, layoutMode: PreviewKit.LayoutMode = .currentDevice) -> some View {
+    public func previewOptions(title: String? = nil, layoutMode: PreviewKit.LayoutMode = .currentDevice) -> some View {
         self.modifier(PreviewOptions(title: title, layoutMode: layoutMode))
     }
 
-    func previewOptions(layoutMode: PreviewKit.LayoutMode = .currentDevice) -> some View {
+    public func previewOptions(layoutMode: PreviewKit.LayoutMode = .currentDevice) -> some View {
         self.modifier(PreviewOptions(title: nil, layoutMode: layoutMode))
     }
 }
