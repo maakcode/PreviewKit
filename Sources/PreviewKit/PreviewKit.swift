@@ -2,27 +2,27 @@
 import SwiftUI
 
 @available(OSX 10.15.0, *)
-struct PreviewKit {
-    struct ScreenSize {
-        let inPoints: CGSize
-        let renderRatio: CGFloat
+public struct PreviewKit {
+    public struct ScreenSize {
+        public let inPoints: CGSize
+        public let renderRatio: CGFloat
 
-        var inPixels: CGSize {
+        public var inPixels: CGSize {
             CGSize(width: inPoints.width*renderRatio, height: inPoints.height*renderRatio)
         }
 
-        init(points: CGSize, renderRatio: CGFloat) {
+        public init(points: CGSize, renderRatio: CGFloat) {
             self.inPoints = points
             self.renderRatio = renderRatio
         }
     }
 
-    enum LayoutMode: Equatable {
+    public enum LayoutMode: Equatable {
         case portrait(Device), landscape(Device), fixed(CGSize), sizeThatFits, currentDevice
 
     }
 
-    enum Device {
+    public enum Device {
         case iPhone4s
         case iPhone5, iPhone5s, iPhone5c, iPhoneSE_G1
         case iPhone6, iPhone6s, iPhone7, iPhone8, iPhoneSE_G2
@@ -37,7 +37,7 @@ struct PreviewKit {
         case iPadPro11_G1, iPadPro11_G2
         case iPadPro12_9, iPadPro12_9_G2, iPadPro12_9_G3, iPadPro12_9_G4
 
-        var name: String {
+        public var name: String {
             switch self {
             case .iPhone4s:
                 return "iPhone 4s"
@@ -124,7 +124,7 @@ struct PreviewKit {
             }
         }
 
-        var screenSize: ScreenSize {
+        public var screenSize: ScreenSize {
             switch self {
             case .iPhone4s:
                 return ScreenSize(points: CGSize(width: 320, height: 480), renderRatio: 2)
@@ -158,11 +158,11 @@ struct PreviewKit {
 }
 
 @available(OSX 10.15.0, *)
-struct PreviewOptions: ViewModifier {
-    let title: String?
-    let layoutMode: PreviewKit.LayoutMode
+public struct PreviewOptions: ViewModifier {
+    public let title: String?
+    public let layoutMode: PreviewKit.LayoutMode
 
-    var previewTitle: String? {
+    public var previewTitle: String? {
         if let title = title {
             return title
         }
@@ -187,7 +187,7 @@ struct PreviewOptions: ViewModifier {
 
     // TODO: - If iOS 14 released, Use `if let` and `switch` statements inside function builders.
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         previewView(content: content).previewDisplayName(previewTitle)
     }
 
