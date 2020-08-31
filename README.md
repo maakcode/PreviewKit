@@ -3,13 +3,15 @@
 Missing features of SwiftUI's Previews.
 
 ## Features
-- [x] Autocomplete device name 
+### Autocomplete device name
 No more hard-coded device name. It it 21st century. 🤬 
+
 ![Autocomplete device name](https://raw.githubusercontent.com/Makeeyaf/PreviewKit/master/previewkit-1.png)
-- [x] Landscape mode support 
+### Landscape mode support 
 Unfortunately, Safe layout area is not supported in landscape mode. 🤨 
+
 ![Landscape mode support](https://raw.githubusercontent.com/Makeeyaf/PreviewKit/master/previewkit-2.png)
-- [x] Automatically name the preview according to the it's options.   
+### Automatically name the preview according to the it's options. 
 ![Automatically name the preview according to the it's options](https://raw.githubusercontent.com/Makeeyaf/PreviewKit/master/previewkit-3.png)
 ## Requirements
 - iOS 13.0+ / macOS 10.15+
