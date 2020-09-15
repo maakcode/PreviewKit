@@ -202,7 +202,7 @@ struct ContentView_Previews: PreviewProvider {
     </tr>
     <tr>
       <td>iPad Pro (12.9-inch)</td>
-      <td align="center" rowspan=4>1024 x 136</td>
+      <td align="center" rowspan=4>1024 x 1366</td>
       <td align="center" rowspan=4>2</td>
     </tr>
     <tr>
